@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h2>{{ events }}</h2>
+    <div v-for="event in events">
+      <p>{{ event.name }}</p>
+    </div>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Upcoming Events!",
       events: [],
     };
   },
