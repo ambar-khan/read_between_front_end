@@ -3,6 +3,9 @@
     <h1>{{ message }}</h1>
     <div v-for="event in events">
       <p>{{ event.name }}</p>
+      <router-link v-bind:to="'/events/' + event.id">
+        <img v-bind:src="event.image">
+      </router-link>
     </div>
   </div>
 </template>
