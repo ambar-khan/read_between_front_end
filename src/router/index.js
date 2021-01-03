@@ -5,6 +5,7 @@ import EventsNew from '../views/EventsNew.vue';
 import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 import Signup from '../views/Signup.vue';
+import Login from '../views/Login.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/signup',
     name: 'signup',
     component: Signup
+  },
+  {
+    path: '/Login',
+    name: 'login',
+    component: Login
   },
 ];
 
