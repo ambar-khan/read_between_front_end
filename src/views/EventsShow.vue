@@ -1,7 +1,7 @@
 <template>
   <div class="events-show">
-    <h1>{{ message }}</h1>
-    <h2>Event Name: {{ event.name }} </h2>
+    <h2>{{ event.name }}</h2>
+    <img v-bind:src="event.image">
     <h2>Event Date: {{ event.date }}</h2>
     <h2>Event Time: {{ event.time }}</h2>
     <h2>Event Meeting Link: {{ event.meeting_link }}</h2>
@@ -18,7 +18,6 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Show Events!",
       event: {},
     };
   },
