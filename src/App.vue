@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/events">Events Index</router-link> |
       <router-link to="/events/new">Create an Event</router-link> |
+      <router-link to="/signup">Signup for an Account</router-link> |
     </div>
     <router-view/>
   </div>
