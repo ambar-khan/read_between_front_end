@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import EventsNew from '../views/EventsNew.vue';
 import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 
@@ -11,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/events/new',
+    name: 'events-new',
+    component: EventsNew
   },
   {
     path: '/events',
