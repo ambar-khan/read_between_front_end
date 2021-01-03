@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h2>{{ events }}</h2>
+    <!-- <h2>{{ events }}</h2> -->
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to Vue.js!",
+      message: "Welcome to ReadBetween!",
       events: [],
     };
   },

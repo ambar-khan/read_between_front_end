@@ -6,6 +6,7 @@ import EventsIndex from '../views/EventsIndex.vue';
 import EventsShow from '../views/EventsShow.vue';
 import Signup from '../views/Signup.vue';
 import Login from '../views/Login.vue';
+import Logout from '../views/Logout.vue';
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/Login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/Logout',
+    name: 'logout',
+    component: Logout
   },
 ];
 

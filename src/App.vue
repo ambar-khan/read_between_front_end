@@ -5,7 +5,8 @@
       <router-link to="/events">Events Index</router-link> |
       <router-link to="/events/new">Create an Event</router-link> |
       <router-link to="/signup">Signup for an Account</router-link> |
-      <router-link to="/login">Login</router-link>
+      <router-link to="/login">Login</router-link> |
+      <router-link to="/logout">Logout</router-link>
     </div>
     <router-view/>
   </div>
