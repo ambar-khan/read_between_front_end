@@ -1,36 +1,24 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/events">Events Index</router-link> |
-      <router-link to="/events/new">Create an Event</router-link> |
-      <router-link to="/signup">Signup for an Account</router-link> |
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/logout">Logout</router-link>
-    </div>
-    <router-view/>
+      <div id="page-wrapper">
+        
+		<!-- Header -->
+				<header id="header" class="alt">
+					<h1 id="logo"><a href="index.html">ReadBetween</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="/login">Login</a>
+							<li class="current"><a href="/logout">Logout</a></li>	
+							<li><a href="/signup" class="button primary">Sign Up</a></li>
+						</ul>
+					</nav>
+				</header>        
+
+        <router-view/>
+      </div>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
