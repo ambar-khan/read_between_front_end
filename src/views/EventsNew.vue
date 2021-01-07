@@ -1,4 +1,13 @@
 <template>
+  <div id="page-wrapper">
+    <article id="main">
+		<header class="special container">
+			<span class="icon solid fa-book"></span>
+			<h2>Start a Discussion</h2>
+			<p>Use the form below to schedule a book discussion event!</p>
+		</header>
+
+    <section class="wrapper style3 special container medium">   
   <div class="events-new">
     <form v-on:submit.prevent="submit()">
       <h1>Create a New Event</h1>
@@ -25,8 +34,12 @@
         <label>Book Cover Image: </label>
         <input type="text" class="form-control" v-model="image">
       </div>
+      <br>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
+  </div>
+    </section>
+    </article>
   </div>
 </template>
 
