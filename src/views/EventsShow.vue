@@ -32,7 +32,8 @@
 												<header>
 													<h3>Event Information:</h3>
 												</header>
-												<p><strong>Event Date:</strong> {{ event.date }}<br>
+												<p><strong>Host Email:</strong><a v-bind:href="'mailto:' + event.email"> {{ event.email }}</a><br>
+													<strong>Event Date:</strong> {{ event.date }}<br>
                            <strong>Event Time:</strong> {{ event.time }}<br>
                            <strong>Meeting Link:</strong> {{ event.meeting_link }}
                         </p>												
@@ -49,11 +50,11 @@
                         </p>												
 													<strong>Summary:</strong><br>
 												<p>{{ event.book_description }}</p>
-                        <footer>
+                        <!-- <footer>
 													<ul class="buttons">
 														<li><a href="#" class="button small">Register for Event</a></li>
 													</ul>
-												</footer>
+												</footer> -->
 											</section>
 
 										</div>
