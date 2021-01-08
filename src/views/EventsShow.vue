@@ -9,9 +9,6 @@
 				<span class="icon solid fa-book"></span>
 				<h2>{{ event.name }}</h2>
 				<p>Hosted by: {{ event.first_name }} {{ event.last_name }}</p><br>
-				<ul class="buttons">
-					<li><a href="/events" class="button small">Upcoming Events</a></li>
-				</ul>
 			</header>   
     
 						<section class="wrapper style4 container">

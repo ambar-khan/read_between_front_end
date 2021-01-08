@@ -8,17 +8,34 @@
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="/">Welcome</a></li>
-							<li class="current"><a href="/login">Login</a>
-							<li class="current"><a href="/logout">Logout</a></li>	
+							<li v-if="!isLoggedIn()" class="current"><a href="/login">Login</a>
+							<li v-if="isLoggedIn()" class="current"><a href="/logout">Logout</a></li>
+							<li v-if="isLoggedIn()" class="current"><a href="/events">Upcoming Events</a></li>
+							<li v-if="isLoggedIn()" class="current"><a href="events/new">Start a Discussion</a></li>
 							<li><a href="/signup" class="button primary">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>        
 
-        <router-view/>
+			<router-view/>
+
       </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+};
+</script>
 
 
 

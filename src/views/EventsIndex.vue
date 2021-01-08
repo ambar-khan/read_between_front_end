@@ -3,9 +3,6 @@
 		<section class="wrapper style3 container special">
 			<header class="major">
 				<h2>Upcoming Book Discussions!</h2><br>
-        <ul class="buttons">
-					<li><a href="/events/new" class="button small"> Schedule a Book Discussion </a></li>
-				</ul>
 			</header>
       <div class="row">
       <div class="col-6 col-12-narrower" v-for="event in events"><br>
