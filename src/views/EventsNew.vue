@@ -4,13 +4,16 @@
 		<header class="special container">
 			<span class="icon solid fa-book"></span>
 			<h2>Start a Discussion</h2>
-			<p>Use the form below to schedule a book discussion event!</p>
+			<p>Use the form below to schedule a book discussion event!<br>
+      </p>
 		</header>
 
     <section class="wrapper style3 special container medium">   
   <div class="events-new">
     <form v-on:submit.prevent="submit()">
       <h1>Create a New Event</h1>
+       **Please note that you must add in the correct ISBN13 for the event to auto-populate<br>
+         book information: Title, Author and Description.
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
       </ul>
@@ -34,6 +37,10 @@
         <label>Book Cover Image: </label>
         <input type="text" class="form-control" v-model="image">
       </div>
+      <div class="form-group">
+        <label>ISBN13: </label><br>
+        <input type="text" class="form-control" v-model="book_id">
+      </div>
       <br>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
@@ -54,6 +61,7 @@ export default {
       time: "",
       meeting_link: "",
       image: "",
+      book_id: "",
       errors: [],
     };
   },
@@ -65,6 +73,7 @@ export default {
         time: this.time,
         meeting_link: this.meeting_link,
         image: this.image,
+        book_id: this.book_id,
       };
       axios
         .post("/api/events", params)
