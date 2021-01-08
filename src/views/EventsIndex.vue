@@ -1,9 +1,16 @@
 <template>
-  <div>    
+ <body class="no-sidebar is-preload">
+		
+    <article id="main">
+
+		<header class="special container">
+			<span class="icon solid fa-book"></span>
+				<h2>Upcoming Book Discussions!</h2>
+		</header>
+
 		<section class="wrapper style3 container special">
-			<header class="major">
-				<h2>Upcoming Book Discussions!</h2><br>
-			</header>
+
+      <div class="content">
       <div class="row">
       <div class="col-6 col-12-narrower" v-for="event in events"><br>
         <p>{{ event.name }}<br>
@@ -13,8 +20,11 @@
         </router-link>
       </div>
       </div>
+      </div>
     </section>
-   </div>
+ 
+  </article>
+</body>    
 </template>
 
 <style>
