@@ -24,7 +24,7 @@
 					</div>
 					<div class="col-4 col-12-mobile">
             <label>Last Name:</label>
-					  <input type="text" v-model="last_name" placeholder="Last Name" />
+					<input type="text" v-model="last_name" placeholder="Last Name" />
 					</div>
           <div class="col-4 col-12-mobile">
             <label>Email:</label>

@@ -11,7 +11,7 @@
 							<li v-if="!isLoggedIn()" class="current"><a href="/login">Login</a></li>
 							<li v-if="isLoggedIn()" class="current"><a href="/logout">Logout</a></li>
 							<li v-if="isLoggedIn()" class="current"><a href="/events">Upcoming Events</a></li>
-							<li v-if="isLoggedIn()" class="current"><a href="events/new">Start a Discussion</a></li>
+							<li v-if="isLoggedIn()" class="current"><a href="/events/new">Start a Discussion</a></li>
 							<li v-if="!isLoggedIn()"><a href="/signup" class="button primary">Sign Up</a></li>
 						</ul>
 					</nav>
@@ -32,6 +32,10 @@ export default {
       } else {
         return false;
       }
+    },
+    getUserId: function () {
+      console.log("getting user id...");
+      return localStorage.getItem("user_id");
     },
   },
 };

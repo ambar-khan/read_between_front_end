@@ -33,12 +33,12 @@
 													<h3>Event Information:</h3>
 												</header>
 												<p><strong>Host Email:</strong><a v-bind:href="'mailto:' + event.email"> {{ event.email }}</a><br>
-													<strong>Event Date:</strong> {{ event.date }}<br>
-                           <strong>Event Time:</strong> {{ event.time }}<br>
-                           <strong>Meeting Link:</strong> {{ event.meeting_link }}
-													 <br>
-													 <br>
-													 	<router-link v-bind:to="`/events/${event.id}/edit`">Update Event Information</router-link>
+												<strong>Event Date:</strong> {{ event.date }}<br>
+                        <strong>Event Time:</strong> {{ event.time }}<br>
+                        <strong>Meeting Link:</strong> {{ event.meeting_link }}
+												<br>
+												<br>
+												<router-link v-if="$parent.getUserId() == event.user_id" v-bind:to="`/events/${event.id}/edit`">Update Event Information</router-link>
                         </p>												
 											</section>
 
