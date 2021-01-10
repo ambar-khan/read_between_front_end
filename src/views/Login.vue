@@ -31,7 +31,7 @@
       </div>
       <div class="col-4 col-12-mobile"></div>
       </div>
-      
+
     </form>
     </section>
     </article>
@@ -61,7 +61,7 @@ export default {
         .then((response) => {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
-          localStorage.setItem("jwt", response.data.jwt);
+          localStorage.setItem("user_id", response.data.user_id);
           this.$router.push("/events");
         })
         .catch((error) => {

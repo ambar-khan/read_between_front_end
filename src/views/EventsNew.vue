@@ -76,7 +76,7 @@
         <div class="form-group">
         <label>Book Cover Image Link: </label>
         <input type="text" class="form-control" v-model="image">
-        <h7><strong>**Goodreads Book Cover Images Recommended</strong></h7>
+        <h7><strong>**Book cover images from <a href="https://www.goodreads.com/search">GoodReads.com</a> recommended.</strong></h7>
     </div>
       
       <br>

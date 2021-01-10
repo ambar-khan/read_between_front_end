@@ -23,7 +23,7 @@
 											</section>
 										</div>
 
-								</div>
+								</div>                                                                       
 								<div class="col-6 col-12-narrower">
 
 									<!-- Sidebar -->
