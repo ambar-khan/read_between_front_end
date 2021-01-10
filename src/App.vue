@@ -27,7 +27,7 @@
 export default {
   methods: {
     isLoggedIn: function () {
-      if (localStorage.getItem("jwt")) {
+      if (localStorage.getItem("user_id")) {
         return true;
       } else {
         return false;
