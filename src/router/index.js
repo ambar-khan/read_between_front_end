@@ -7,6 +7,7 @@ import EventsShow from '../views/EventsShow.vue';
 import Signup from '../views/Signup.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
+import EventsEdit from '../views/EventsEdit.vue';
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/events/:id',
     name: 'events-show',
     component: EventsShow
+  },
+  {
+    path: '/events/:id/edit',
+    name: 'events-edit',
+    component: EventsEdit
   },
   {
     path: '/signup',

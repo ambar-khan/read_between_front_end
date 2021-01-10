@@ -9,13 +9,13 @@
 				<span class="icon solid fa-book"></span>
 				<h2>{{ event.name }}</h2>
 				<p>Hosted by: {{ event.first_name }} {{ event.last_name }}</p><br>
+				
 			</header>   
     
 						<section class="wrapper style4 container">
 
 							<div class="row gtr-150">
 								<div class="col-6 col-12-narrower">
-
 									<!-- Content -->
 										<div class="content">
 											<section>
@@ -36,6 +36,9 @@
 													<strong>Event Date:</strong> {{ event.date }}<br>
                            <strong>Event Time:</strong> {{ event.time }}<br>
                            <strong>Meeting Link:</strong> {{ event.meeting_link }}
+													 <br>
+													 <br>
+													 	<router-link v-bind:to="`/events/${event.id}/edit`">Update Event Information</router-link>
                         </p>												
 											</section>
 

@@ -1,10 +1,11 @@
 <template>
+<div class="events-edit">
   <div id="page-wrapper">
     <article id="main">
 		<header class="special container">
 			<span class="icon solid fa-book"></span>
-			<h2>Start a Discussion</h2>
-			<p>Use the form below to schedule your upcoming book discussion event!<br>
+			<h2>Update Your Event</h2>
+			<p>Use the form below to make any changes to your upcoming book discussion event.<br>
       </p>
 		</header>
 
@@ -86,6 +87,7 @@
     </section>
     </article>
   </div>
+</div>
 </template>
 
 <script>
@@ -107,6 +109,10 @@ export default {
       errors: [],
     };
   },
+  created: function () {
+    console.log("in create...");
+    this.getEventData();
+  },
   methods: {
     submit: function () {
       var params = {
@@ -122,13 +128,28 @@ export default {
         book_description: this.book_description,
       };
       axios
-        .post("/api/events", params)
+        .patch("/api/events", params)
         .then((response) => {
           this.$router.push("/events");
         })
         .catch((error) => {
           this.error = error.response.data.errors;
         });
+    },
+    getEventData: function () {
+      axios.get("/api/events/" + this.$route.params.id).then((response) => {
+        console.log(response.data);
+        this.name = response.data.name;
+        this.date = response.data.date;
+        this.time = response.data.time;
+        this.meeting_link = response.data.meeting_link;
+        this.image = response.data.image;
+        this.book_id = response.data.book_id;
+        this.book_title = response.data.book_title;
+        this.book_author = response.data.book_author;
+        this.book_subtitle = response.data.book_subtitle;
+        this.book_description = response.data.book_description;
+      });
     },
   },
 };

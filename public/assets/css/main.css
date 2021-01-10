@@ -1722,8 +1722,16 @@ input, select, textarea {
 
 /* Section/Article */
 
-	section.special, article.special {
+	section.special {
+		text-align: left;
+	}
+
+	article.special {
 		text-align: center;
+	}
+
+	section.special h7{
+		font-size: 0.9em;
 	}
 
 	header.major {
@@ -2206,13 +2214,22 @@ input, select, textarea {
 
 /* Wrapper */
 
-	.wrapper {
-		margin-bottom: 5em;
-		padding: 5em;
+	.wrapper.style2, .wrapper.style3, .wrapper.style4  {
+		margin-bottom: 2em;
+		padding-top: 1em ;
+		padding-right: 5em;
+  	padding-bottom: 5em;
+  	padding-left: 5em;
 	}
 
 		.wrapper.style1 {
-			padding: 0;
+			padding-top: 2em ;
+			padding-right: 5em;
+  		padding-bottom: 0em;
+  		padding-left: 5em;
+			background: #fff;
+			color: inherit;
+			margin-bottom: 0em;
 		}
 
 		.wrapper.style2 {

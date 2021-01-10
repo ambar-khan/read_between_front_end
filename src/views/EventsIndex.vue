@@ -9,19 +9,21 @@
         
 		</header>
 
-		<section class="wrapper style3 container special">
-
+		<section class="wrapper style1 container special">
     <div class="content">
-      <div class="row">  
-        <div class="col-3 col-12-narrower">        
-      </div>
-      <div class="col-6 col-12-narrower">
-        <p>Search: <input type="text" placeholder="Author or Title" v-model="searchTerm"></p>
-      </div>
-      <div class="col-3 col-12-narrower">
-      </div>  
+      <div class="row">
+        <div class="col-4 col-12-narrower">
+          <p>Search Events: <input type="text" placeholder="Author or Title" v-model="searchTerm"></p>
+        </div>
+        <div class="col-4 col-12-narrower">        
+        </div>
+        <div class="col-4 col-12-narrower">
+        </div>  
       </div>
     </div>
+    </section>
+
+    <article class="wrapper style3 container special">
       <div class="content">
       <div class="row">
       <div class="col-6 col-12-narrower" v-for="event in orderBy(filterBy(events, searchTerm, 'book_title', 'book_author'), 'book_title', 'book_author')"><br>
@@ -29,13 +31,13 @@
         {{ event.date }}</p>
         <router-link v-bind:to="'/events/' + event.id">
         <img v-bind:src="event.image">
-        <p>{{ event.book_title }}<br>
+        <p>{{ event.book_title }} {{ event.book_subtitle }}<br>
         By: {{ event.book_author }}</p>
         </router-link>
       </div>
       </div>
       </div>
-    </section>
+    </article>
  
   </article>
 </body>    

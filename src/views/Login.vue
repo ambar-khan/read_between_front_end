@@ -17,12 +17,21 @@
         <label>Email:</label>
         <input type="email" class="form-control" v-model="email" placeholder="Email">
       </div>
+      <br> 
       <div class="form-group">
         <label>Password:</label>
         <input type="password" class="form-control" v-model="password" placeholder="Password">
       </div>
       <br>
-      <input type="submit" class="btn btn-primary" value="Submit">
+      
+      <div class="row gtr-50">
+      <div class="col-4 col-12-mobile"></div>
+      <div class="col-4 col-12-mobile">
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </div>
+      <div class="col-4 col-12-mobile"></div>
+      </div>
+      
     </form>
     </section>
     </article>
