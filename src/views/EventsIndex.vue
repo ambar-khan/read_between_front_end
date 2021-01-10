@@ -13,7 +13,7 @@
 
     <div class="content">
       <div class="row">  
-        	<div class="col-3 col-12-narrower">        
+        <div class="col-3 col-12-narrower">        
       </div>
       <div class="col-6 col-12-narrower">
         <p>Search: <input type="text" placeholder="Author or Title" v-model="searchTerm"></p>
