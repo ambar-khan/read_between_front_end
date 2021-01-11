@@ -28,14 +28,14 @@ const routes = [
     component: EventsIndex
   },
   {
-    path: '/events/:id',
-    name: 'events-show',
-    component: EventsShow
-  },
-  {
     path: '/events/:id/edit',
     name: 'events-edit',
     component: EventsEdit
+  },
+  {
+    path: '/events/:id',
+    name: 'events-show',
+    component: EventsShow
   },
   {
     path: '/signup',

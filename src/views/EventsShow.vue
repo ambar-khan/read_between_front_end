@@ -22,10 +22,8 @@
 												<a href="#" class="image featured"><img v-bind:src="event.image" alt="" /></a>
 											</section>
 										</div>
-
 								</div>                                                                       
 								<div class="col-6 col-12-narrower">
-
 									<!-- Sidebar -->
 										<div class="sidebar">
 											<section>
@@ -36,7 +34,6 @@
 												<strong>Event Date:</strong> {{ event.date }}<br>
                         <strong>Event Time:</strong> {{ event.time }}<br>
                         <strong>Meeting Link:</strong> {{ event.meeting_link }}
-												<br>
 												<br>
 												<router-link v-if="$parent.getUserId() == event.user_id" v-bind:to="`/events/${event.id}/edit`">Update Event Information</router-link>
                         </p>												
@@ -51,23 +48,24 @@
                            <strong>Author:</strong> {{ event.book_author }}<br>
                            <strong>ISBN13:</strong> {{ event.book_id }}<br>
                         </p>												
-													<strong>Summary:</strong><br>
-												<p>{{ event.book_description }}</p>
-                        <!-- <footer>
-													<ul class="buttons">
-														<li><a href="#" class="button small">Register for Event</a></li>
-													</ul>
-												</footer> -->
 											</section>
-
 										</div>
-
 								</div>
 							</div>
-						</section>
 
-
-
+						<div class="row gtr-150">
+							<div class="col-12 col-12-narrower">
+									<!-- Content -->
+										<div class="content">
+											<section>
+												<strong>Summary:</strong><br>
+												<p>{{ event.book_description }}</p>
+											</section>
+										</div>
+							</div>
+						</div>
+						<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+						</section>						
     </article>
     </div>
 </body>   
@@ -84,6 +82,13 @@ export default {
   data: function () {
     return {
       event: {},
+      comments: [
+        {
+          author: "Eragon",
+          content:
+            "Lorem ipsum *dolor* sit amet, ***consectetur*** adipisicing elit. Blanditiis architecto repellat unde possimus quaerat corporis assumenda eveniet illum facilis quas sed nobis est sint error expedita voluptas dolore tempora nostrum.",
+        },
+      ],
     };
   },
   created: function () {

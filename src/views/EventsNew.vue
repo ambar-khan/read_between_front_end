@@ -1,4 +1,5 @@
 <template>
+  <div class="events-new">
   <div id="page-wrapper">
     <article id="main">
 		<header class="special container">
@@ -9,7 +10,6 @@
 		</header>
 
     <section class="wrapper style3 special container medium">   
-  <div class="events-new">
     <form v-on:submit.prevent="submit()">
       <ul>
         <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -71,20 +71,19 @@
 
     <div class="form-group">
         <label>Description: </label>
-        <input type="text" class="form-control" v-model="description">
+        <input type="text" class="form-control" v-model="book_description">
     </div>
         <div class="form-group">
         <label>Book Cover Image Link: </label>
         <input type="text" class="form-control" v-model="image">
         <h7><strong>**Book cover images from <a href="https://www.goodreads.com/search">GoodReads.com</a> recommended.</strong></h7>
     </div>
-      
       <br>
       <input type="submit" class="btn btn-primary" value="Submit">
     </form>
-  </div>
     </section>
     </article>
+  </div>
   </div>
 </template>
 

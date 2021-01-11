@@ -45,10 +45,8 @@
       <h3><strong>Book Information</strong></h3>
       <div class="form-group">
         <label>ISBN13: </label><br>
-        <input type="text" class="form-control" v-model="book_id">
-        <h7><strong>**Please note to auto-populate book's title, author and description you must enter correct ISBN13.</strong></h7>        
+        <input type="text" class="form-control" v-model="book_id">       
       </div>
-      <br>
       <div class="row gtr-50">
         <div class="col-4 col-12-mobile">
           <div class="form-group" >       					
@@ -72,7 +70,7 @@
 
     <div class="form-group">
         <label>Description: </label>
-        <input type="text" class="form-control" v-model="description">
+        <input type="text" class="form-control" v-model="book_description">
     </div>
         <div class="form-group">
         <label>Book Cover Image Link: </label>
@@ -128,9 +126,9 @@ export default {
         book_description: this.book_description,
       };
       axios
-        .patch("/api/events", params)
+        .patch("/api/events/" + this.$route.params.id, params)
         .then((response) => {
-          this.$router.push("/events");
+          this.$router.push("/events/" + this.$route.params.id);
         })
         .catch((error) => {
           this.error = error.response.data.errors;
