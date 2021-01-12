@@ -39,7 +39,7 @@
 												<router-link v-if="$parent.getUserId() == event.user_id" v-bind:to="`/events/${event.id}/edit`"><strong>Update Event Information</strong></router-link>
                         </p>												
 											</section>
-
+											<button v-on:click="submit()">Register for Event</button>		
                       <section>
 												<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
 												<header>
@@ -48,9 +48,10 @@
 												<p><strong>Title:</strong> {{ event.book_title }}{{ event.book_subtitle }} <br>
                            <strong>Author:</strong> {{ event.book_author }}<br>
                            <strong>ISBN13:</strong> {{ event.book_id }}<br>
-                        </p>												
+                        </p>
+																						
 											</section>
-										</div>
+										</div>                          
 								</div>
 							</div>
 
@@ -60,11 +61,25 @@
 										<div class="content">
 											<section>
 												<strong>Summary:</strong><br>
-												<p>{{ event.book_description }}</p>
+												<p>{{ event.book_description }}</p>									
 											</section>
 										</div>
 							</div>
 						</div>
+						<div class="row gtr-150">
+							<div class="col-12 col-12-narrower">
+									<!-- Content -->
+										<div class="content">
+											<section>
+												<strong>Event Participants:</strong><br>
+												<div v-for="user in event.registered_users"><strong>- Name:</strong> {{ user.first_name }} {{ user.last_name }}
+												<br>  
+												<strong>Email:</strong> {{ user.email }} </div>								
+											</section>
+										</div>
+							</div>
+						</div>
+						<br>
 						<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
 						</section>						
     </article>
@@ -83,13 +98,7 @@ export default {
   data: function () {
     return {
       event: {},
-      comments: [
-        {
-          author: "Eragon",
-          content:
-            "Lorem ipsum *dolor* sit amet, ***consectetur*** adipisicing elit. Blanditiis architecto repellat unde possimus quaerat corporis assumenda eveniet illum facilis quas sed nobis est sint error expedita voluptas dolore tempora nostrum.",
-        },
-      ],
+      registered_users: [],
     };
   },
   created: function () {
@@ -104,6 +113,20 @@ export default {
         console.log(response.data);
         this.event = response.data;
       });
+    },
+    submit: function () {
+      console.log("submitting..");
+      var params = {
+        event_id: this.event.id,
+      };
+      axios
+        .post("/api/eventregistrations", params)
+        .then((response) => {
+          window.location.reload();
+        })
+        .catch((error) => {
+          this.error = error.response.data.errors;
+        });
     },
   },
 };
