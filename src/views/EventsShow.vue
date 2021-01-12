@@ -35,7 +35,8 @@
                         <strong>Event Time:</strong> {{ event.time }}<br>
                         <strong>Meeting Link:</strong> {{ event.meeting_link }}
 												<br>
-												<router-link v-if="$parent.getUserId() == event.user_id" v-bind:to="`/events/${event.id}/edit`">Update Event Information</router-link>
+												<br>
+												<router-link v-if="$parent.getUserId() == event.user_id" v-bind:to="`/events/${event.id}/edit`"><strong>Update Event Information</strong></router-link>
                         </p>												
 											</section>
 

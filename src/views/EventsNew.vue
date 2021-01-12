@@ -73,6 +73,7 @@
         <label>Description: </label>
         <input type="text" class="form-control" v-model="book_description">
     </div>
+    
         <div class="form-group">
         <label>Book Cover Image Link: </label>
         <input type="text" class="form-control" v-model="image">

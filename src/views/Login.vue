@@ -62,6 +62,7 @@ export default {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("user_id", response.data.user_id);
+          localStorage.setItem("jwt", response.data.jwt);
           this.$router.push("/events");
         })
         .catch((error) => {
