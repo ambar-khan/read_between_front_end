@@ -15,7 +15,7 @@
 						<header>
               <h2>ReadBetween</h2>
 						</header>
-						<p>An app that connects a community of boook lovers
+						<p>An app that connects a community of book lovers
 						<br />
 						through virtual discussions about their favorite reads.</p>
 					</div>
